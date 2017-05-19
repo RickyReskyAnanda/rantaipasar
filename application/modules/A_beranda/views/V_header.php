@@ -9,7 +9,6 @@
 
     <link href="<?=base_url()?>admin/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?=base_url()?>admin/font-awesome/css/font-awesome.css" rel="stylesheet">
-
     <link href="<?=base_url()?>admin/css/animate.css" rel="stylesheet">
     <link href="<?=base_url()?>admin/css/style.css" rel="stylesheet">
     <link href="<?=base_url()?>admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
