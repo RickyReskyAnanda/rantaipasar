@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class A_logged_in extends CI_Controller{
+class P_distributor extends CI_Controller{
 
     public function __construct()
     {

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class A_beranda extends MY_Controller{
+class P_cari_distributor extends MY_Controller{
 
     public function __construct()
     {
