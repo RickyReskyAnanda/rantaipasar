@@ -12,15 +12,15 @@ class MY_Controller extends CI_Controller{
         $this->load->view($page_isi,$data);
         $this->load->view('H_beranda/V_footer');
     }
-    public function user_view($page_isi,$data){
-        $this->load->view('U_beranda/V_head',$data);
+    public function distributor_view($page_isi,$data){
+        $this->load->view('D_beranda/V_head',$data);
         $this->load->view($page_isi,$data);
-        $this->load->view('U_beranda/V_footer');
+        $this->load->view('D_beranda/V_footer');
     }
-    public function admin_view($page_isi,$data=array()){
-        $this->load->view('A_beranda/V_header',$data);
+    public function produsen_view($page_isi,$data=array()){
+        $this->load->view('P_beranda/V_header',$data);
         $this->load->view($page_isi,$data);
-        $this->load->view('A_beranda/V_footer');
+        $this->load->view('P_beranda/V_footer');
     }
 
     //redirect login

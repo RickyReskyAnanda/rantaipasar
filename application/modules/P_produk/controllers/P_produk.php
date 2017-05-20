@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class P_produk extends CI_Controller{
+class P_produk extends MY_Controller{
 
     public function __construct()
     {
@@ -9,25 +9,17 @@ class P_produk extends CI_Controller{
     }
    
     public function index(){
-        $logged_in = $this->session->userdata('logged_in');
-        if($logged_in == "78jhk391menitID") {
-            redirect('1menitadmin/beranda');
-        }else{
-            $this->load->view('V_login');
-        }
-    }    
-    public function cek_logged_in(){
-        if($this->session->userdata('logged_in')=='78jhk391menitID'){
-            redirect('1menitadmin/beranda');
-        }else{
-            $this->load->model('M_logged_in');
-            $this->M_logged_in->cek_data_login();
-        }
+        $this->produsen_view('V_produk');
     }
-    public function user_log_out(){
-        $newdata = array('nama','posisi','email','id_akun','role','logged_in');
-        $this->session->unset_userdata($newdata);
-        redirect('1menitadmin');
+    public function view_detail_produk(){
+        $this->produsen_view('V_detail_produk');
     }
+    public function view_tambah_produk(){
+        $this->produsen_view('V_tambah_produk');
+    }
+    public function view_edit_produk(){
+        $this->produsen_view('V_edit_produk');
+    }
+
 }
 ?>

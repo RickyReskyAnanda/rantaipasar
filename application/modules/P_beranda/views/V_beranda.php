@@ -1,305 +1,169 @@
 
-<div class="wrapper wrapper-content">
-    <div class="row">
-        <div class="col-md-12">
-            <?php if($this->session->flashdata('pesanproses')!=''){?>
-            <div class="alert alert-success alert-dismissable">
-                <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
-                <?= ucfirst($this->session->flashdata('pesanproses')); ?>
-            </div>
-            <?php } ?>
-            <div class="tabs-container">
-                <ul class="nav nav-tabs">
-                    <li class="active" onclick="ambilData('Editor','#editorText')"><a data-toggle="tab" href="#tab-1">Editor</a></li>
-                    <li class=""  onclick="ambilData('Admin','#adminText')"><a data-toggle="tab" href="#tab-2">Admin</a></li>
-                </ul>
-                <div class="tab-content">
-                    <div id="tab-1" class="tab-pane active">
-                        <div class="panel-body">
-                            <button class="btn btn-info btn-rounded" data-toggle="modal" data-target="#detailBerita" data-backdrop="false" style="margin-bottom: 10px;" onclick="viewTambah()"><i class="fa fa-plus"></i> Tambah Editor</button>
-                            <table class="table table-bordered">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Nama Editor</th>
-                                    <th>Email</th>
-                                    <th>Posisi</th>
-                                    <th>Gender</th>
-                                    <th>Status</th>
-                                    <th>Waktu berubah</th>
-                                    <th>Aksi</th>
-                                </tr>
-                                </thead>
-                                <tbody id="editorText">
-                                </tbody>
-                            </table>
+            <div class="wrapper wrapper-content">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <span class="label label-success pull-right">Monthly</span>
+                                <h5>Income</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins">40 886,200</h1>
+                                <div class="stat-percent font-bold text-success">98% <i class="fa fa-bolt"></i></div>
+                                <small>Total income</small>
+                            </div>
                         </div>
                     </div>
-                    <div id="tab-2" class="tab-pane">
-                        <div class="panel-body">
-                            <button class="btn btn-info btn-rounded" data-toggle="modal" data-target="#detailBerita" data-backdrop="false" style="margin-bottom: 10px;"><i class="fa fa-plus"></i> Tambah Admin</button>
-                            <table class="table table-bordered">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Nama Admin</th>
-                                    <th>Email</th>
-                                    <th>Posisi</th>
-                                    <th>Gender</th>
-                                    <th>Status</th>
-                                    <th>Waktu berubah</th>
-                                    <th>Aksi</th>
-                                </tr>
-                                </thead>
-                                <tbody id="adminText">
-                                </tbody>
-                            </table>
+                    <div class="col-lg-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <span class="label label-info pull-right">Annual</span>
+                                <h5>Orders</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins">275,800</h1>
+                                <div class="stat-percent font-bold text-info">20% <i class="fa fa-level-up"></i></div>
+                                <small>New orders</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-content">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="ibox-content">
+                                        <p>
+                                            You can add any animation effect to your modal window. Just pick up some of the effect from animation page and add it to <code>.modal-content</code> elemente.
+                                        </p>
+
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">
+                                            FlipInY effect
+                                        </button>
+                                        <div class="modal inmodal" id="myModal2" tabindex="-1" role="dialog" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content animated flipInY">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                        <h4 class="modal-title">Modal title</h4>
+                                                        <small class="font-bold">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</small>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p><strong>Lorem Ipsum is simply dummy</strong> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                                            printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                                                            remaining essentially unchanged.</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                        
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>Messages</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content ibox-heading">
+                                <h3> VISI</h3>
+                                <small><i class="fa fa-tim"></i> You have 22 new messages and 16 waiting in draft folder.</small>
+                            </div>
+                            <div class="ibox-content ibox-heading">
+                                <h3> MISI</h3>
+                                <small><i class="fa fa-tim"></i> You have 22 new messages and 16 waiting in draft folder.</small>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="feed-activity-list">
+
+                                    <div class="feed-element">
+                                        
+                                    </div>
+
+                                    
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                </div>
-                
-            </div><!-- .tab -->
+                    <div class="col-lg-8">
 
-        </div><!-- .col 12 -->
-    </div><!-- .row -->
-</div>
-<div class="modal inmodal" id="detailBerita" tabindex="-1" role="dialog"  aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content animated fadeIn">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" onclick="tutupModal()"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title">Detail Berita</h4>
-            </div>
-            <div class="modal-body" id="isiDetail">
-                <div class="row" style="margin-bottom: 10px;">
-                    <label class="col-sm-2 control-label">Nama Lengkap</label>
-                    <div class="col-sm-10"><input id="iNama" type="text" class="form-control" required></div>
-                </div>
-                <div class="row" style="margin-bottom: 10px;">
-                    <label class="col-sm-2 control-label">Email</label>
-                    <div class="col-sm-10"><input id="iEmail" type="email" class="form-control" required></div>
-                </div>
-                <div class="row" style="margin-bottom: 10px;">
-                    <label class="col-sm-2 control-label">Posisi</label>
-                    <div class="col-sm-10"><input id="iPosisi" type="text" class="form-control" required></div>
-                </div>
-                <div class="row" style="margin-bottom: 10px;">
-                    <label class="col-sm-2 control-label">Gender</label>
-                    <div class="col-sm-10">
-                    <select class="form-control" id="iJk">
-                            <option value="laki-laki">Laki-laki</option>
-                            <option value="perempuan">Perempuan</option>
-                        </select>
+                        <div class="row">
+                            
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="ibox float-e-margins">
+                                    <div class="ibox-title">
+                                        <h5>Gallery</h5>
+                                        <div class="ibox-tools">
+                                            <a class="collapse-link">
+                                                <i class="fa fa-chevron-up"></i>
+                                            </a>
+                                            <a class="close-link">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="ibox-content">
+
+                        <div class="lightBoxGallery">
+                            <a href="img/gallery/1.jpg" title="Image from Unsplash" data-gallery=""><img src="img/gallery/1s.jpg"></a>
+                            <a href="img/gallery/2.jpg" title="Image from Unsplash" data-gallery=""><img src="img/gallery/2s.jpg"></a>
+                            <a href="img/gallery/3.jpg" title="Image from Unsplash" data-gallery=""><img src="img/gallery/3s.jpg"></a>
+                            <a href="img/gallery/4.jpg" title="Image from Unsplash" data-gallery=""><img src="img/gallery/4s.jpg"></a>
+                            <a href="img/gallery/5.jpg" title="Image from Unsplash" data-gallery=""><img src="img/gallery/5s.jpg"></a>
+                            <a href="img/gallery/6.jpg" title="Image from Unsplash" data-gallery=""><img src="img/gallery/6s.jpg"></a>
+                            <a href="img/gallery/7.jpg" title="Image from Unsplash" data-gallery=""><img src="img/gallery/7s.jpg"></a>
+                            <a href="img/gallery/8.jpg" title="Image from Unsplash" data-gallery=""><img src="img/gallery/8s.jpg"></a>
+                            <a href="img/gallery/9.jpg" title="Image from Unsplash" data-gallery=""><img src="img/gallery/9s.jpg"></a>
+                            <a href="img/gallery/10.jpg" title="Image from Unsplash" data-gallery=""><img src="img/gallery/10s.jpg"></a>
+                            <a href="img/gallery/12.jpg" title="Image from Unsplash" data-gallery=""><img src="img/gallery/12s.jpg"></a>
+                            <a href="img/gallery/4.jpg" title="Image from Unsplash" data-gallery=""><img src="img/gallery/4s.jpg"></a>
+
+                            <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+                            <div id="blueimp-gallery" class="blueimp-gallery">
+                                <div class="slides"></div>
+                                <h3 class="title"></h3>
+                                <a class="prev">‹</a>
+                                <a class="next">›</a>
+                                <a class="close">×</a>
+                                <a class="play-pause"></a>
+                                <ol class="indicator"></ol>
+                           
+                                            </div>
+                                            <div class="col-lg-6">
+                                                
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
+
                 </div>
-                <div class="row" style="margin-bottom: 10px;">
-                    <label class="col-sm-2 control-label">Status</label>
-                    <div class="col-sm-10">
-                        <select class="form-control" id="iStatus">
-                            <option value="aktif">Aktif</option>
-                            <option value="tidak-aktif">Tidak-aktif</option>
-                        </select>
-                    </div>
                 </div>
-                <div class="row" style="margin-bottom: 10px;">
-                    <label class="col-sm-2 control-label">Alamat</label>
-                    <div class="col-sm-10"><textarea id="iAlamat" class="form-control" required></textarea></div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-warning btn-rounded" onclick="resetPassword()" data-dismiss="modal">Reset Password</button>
-                <button type="button" class="btn btn-info btn-rounded" onclick="simpanAkun()" data-dismiss="modal">Simpan</button>
-                <button type="button" class="btn btn-white btn-rounded" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<script type="text/javascript">
-    var gLevel='Editor';
-    var gId='#editorText';
-    var i = 0;
-    var kondisi='aktif';
-    var gIdAkun='0';
-    var gRU='tambah';
-    function ambilData(role,idtabel){
-        gLevel  = role;
-        gId     = idtabel;
-        $(gId).html('');
-        if(kondisi=='aktif'){
-            kondisi='naktif';
-            $.ajax({
-                type:"POST",
-                url: "<?=base_url().'A_akun/select_data_akun'?>",
-                data:"level="+role,
-                success: function(hasil) {
-                    Jhasil = $.parseJSON(hasil);
-                    for ( i=0;i<Jhasil.length;++i){
-                        $(gId).append('<tr>'+
-                                '<td>'+(i+1)+'</td>'+
-                                '<td>'+Jhasil[i].nama+'</td>'+
-                                '<td>'+Jhasil[i].email+'</td>'+
-                                '<td>'+Jhasil[i].posisi+'</td>'+
-                                '<td>'+Jhasil[i].jk+'</td>'+
-                                '<td>'+Jhasil[i].status+'</td>'+
-                                '<td>'+Jhasil[i].data_change+'</td>'+
-                                '<td><button class="btn btn-primary btn-rounded" onclick="viewAkun('+Jhasil[i].id_akun+')" data-toggle="modal" data-target="#detailBerita" data-backdrop="false"><i class="fa fa-pencil"></i> Edit</button><button class="btn btn-danger btn-rounded" onclick=deleteAkun('+Jhasil[i].id_akun+')><i class="fa fa-trash"></i> Hapus</button></td></tr>');
-                    }
-                    if(Jhasil.length=='0'){
-                        $(gId).html('<tr><td colspan="8"><h3 align="center">Data Kosong </h3></td></tr>');
-                    }
-                    kondisi='aktif';
-                }
-            });
-        }
-    }
-    ambilData('Editor','#editorText');
-
-
-    function viewTambah(){
-        gRU='tambah';
-        var tNama       = $('#iNama').val('');
-        var tEmail      = $('#iEmail').val('');
-        var tPosisi     = $('#iPosisi').val('');
-        var tJk         = $('#iJk').val('laki-laki');
-        var tStatus     = $('#iStatus').val('aktif');
-        var tAlamat     = $('#iAlamat').val('');
-    }
-    function tambahAkun(){
-        var tNama       = $('#iNama').val();
-        var tEmail      = $('#iEmail').val();
-        var tPosisi     = $('#iPosisi').val();
-        var tJk         = $('#iJk').val();
-        var tStatus     = $('#iStatus').val();
-        var tAlamat     = $('#iAlamat').val();
-
-        $.ajax({
-            type:"POST",
-            url: "<?=base_url().'A_akun/insert_data_akun'?>",
-            data:"nama="+tNama+"&email="+tEmail+"&posisi="+tPosisi+"&jk="+tJk+"&status="+tStatus+"&alamat="+tAlamat+"&role="+gLevel,
-            success: function(hasil) {
-                // alert(hasil);
-                if(hasil=='berhasil'){
-                    ambilData(gLevel,gId);
-                    $('#iNama').val('');
-                    $('#iEmail').val('');
-                    $('#iPosisi').val('');
-                    $('#iAlamat').val('');
-                    swal("Berhasil!", "Berhasil menginput akun.", "success");
-                }else{
-                    swal("Gagal!", "Gagal menginput akun.", "error");
-                }
-            }
-        });
-    }
-
-    function viewAkun(idAkun){
-        gRU='edit';
-        gIdAkun=idAkun;
-        $.ajax({
-            type:"POST",
-            url: "<?=base_url().'A_akun/select_data_edit_akun'?>",
-            data:"idAkun="+idAkun,
-            success: function(hasil) {
-                Jhasil = $.parseJSON(hasil);
-                $('#iNama').val(Jhasil.nama);
-                $('#iEmail').val(Jhasil.email);
-                $('#iPosisi').val(Jhasil.posisi);
-                $('#iAlamat').val(Jhasil.alamat);
-                $('#iJk').val(Jhasil.jk);
-                $('#iStatus').val(Jhasil.status);
-            }
-        });
-    }
-
-    function editAkun(){
-        var tNama       = $('#iNama').val();
-        var tEmail      = $('#iEmail').val();
-        var tPosisi     = $('#iPosisi').val();
-        var tJk         = $('#iJk').val();
-        var tStatus     = $('#iStatus').val();
-        var tAlamat     = $('#iAlamat').val();
-
-        $.ajax({
-            type:"POST",
-            url: "<?=base_url().'A_akun/update_data_akun'?>",
-            data:"nama="+tNama+"&email="+tEmail+"&posisi="+tPosisi+"&jk="+tJk+"&status="+tStatus+"&alamat="+tAlamat+"&id_akun="+gIdAkun,
-            success: function(hasil) {
-                // alert(hasil);
-                if(hasil=='berhasil'){
-                    ambilData(gLevel,gId);
-                    $('#iNama').val('');
-                    $('#iEmail').val('');
-                    $('#iPosisi').val('');
-                    $('#iJk').val('laki-laki');
-                    $('#iStatus').val('aktif');
-                    $('#iAlamat').val('');
-                    swal("Berhasil!", "Berhasil memperbaharui akun.", "success");
-                }else{
-                    swal("Gagal!", "Gagal memperbaharui akun.", "error");
-                }
-            }
-        });
-    }
-
-    function simpanAkun(){
-        if(gRU=='tambah'){
-            tambahAkun();
-        }else if(gRU=='edit'){
-            editAkun();
-        }
-    }
-    function deleteAkun(idAkun){
-        swal({
-            title: "Apakah Anda Ingin Menghapus Akun ?",
-            text: "Akun akan terhapus dan tidak dapat dikembalikan lagi!",
-            type: "warning",
-            showCancelButton: true,
-            cancelButtonText: "Batal",
-            confirmButtonColor: "#DD6B55",
-            confirmButtonText: "Ya!",
-            closeOnConfirm: false
-        }, function () {
-            $.ajax({
-                type:"POST",
-                url: "<?=base_url().'A_akun/delete_data_akun'?>",
-                data:"id="+idAkun,
-                success: function(hasil) {
-                    if(hasil=='berhasil'){
-                        swal("Berhasil!", "Berhasil menghapus akun.", "success");
-                        ambilData(gLevel,gId);
-                    }else{
-                        swal("Gagal!", "Gagal menghapus Akun.", "error");
-                    }
-                }
-            });
-        });
-    }
-    function resetPassword(){
-        swal({
-            title: "Apakah Anda Ingin Me-reset password Akun ?",
-            text: "Password akan kembali ke password default!",
-            type: "warning",
-            showCancelButton: true,
-            cancelButtonText: "Batal",
-            confirmButtonColor: "#DD6B55",
-            confirmButtonText: "Ya!",
-            closeOnConfirm: false
-        }, function () {
-            $.ajax({
-                type:"POST",
-                url: "<?=base_url().'A_akun/reset_pass_akun'?>",
-                data:"id="+gIdAkun,
-                success: function(hasil) {
-                    if(hasil=='berhasil'){
-                        swal("Berhasil!", "Berhasil mereset password akun.", "success");
-                    }else{
-                        swal("Gagal!", "Gagal mereset password Akun.", "error");
-                    }
-                }
-            });
-        });
-    }
-</script>
+        
