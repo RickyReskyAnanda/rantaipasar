@@ -9,6 +9,8 @@ class P_mutasi extends MY_Controller{
     }
 
 
-    
+    public function index(){
+    	$this->produsen_view('V_mutasi');
+    }
 }
 ?>
