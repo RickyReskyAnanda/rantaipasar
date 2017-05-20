@@ -6,11 +6,12 @@ class D_produsen extends MY_Controller{
     public function __construct()
     {
         parent::__construct();
-        $this->cek_session('M_berita');
+        $this->cek_session('M_produsen');
     }
 
     public function index(){
-        $this->admin_view('V_berita');
+    	$data['data']=$this->M_produsen->select_data_produsen();
+        $this->distributor_view('V_produsen',$data);
     }      
     
 }

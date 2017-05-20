@@ -14,7 +14,13 @@ class P_notifikasi extends MY_Controller{
     }
         public function select_data_pemesanan(){
             $data['data']=$this->M_notifikasi->select_data_pemesanan();
+            // print_r($data);die;
             $this->load->view('V_daftar_pemesanan',$data);
+        }
+        public function select_detail_data_pemesanan(){
+            $data['data']=$this->M_notifikasi->select_detail_data_pemesanan();
+            // print_r($data);die;
+            $this->load->view('V_detail_pemesanan',$data);
         }
         public function update_status_data_pemesanan(){
             $this->M_notifikasi->update_status_data_pemesanan();

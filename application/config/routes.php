@@ -19,7 +19,7 @@ $route['produsen/produk']	= 'P_produk';
 $route['produsen/mutasi']	= 'P_mutasi';
 $route['produsen/cari-distributor']	= 'A_logged_in';
 
-$route['produsen/pemesanan']	= 'P_notifikasi/view_pemesanan';
+$route['produsen/pesanan']	= 'P_notifikasi/view_pemesanan';
 $route['produsen/permintaan']	= 'P_notifikasi/view_permintaan';
 
 
@@ -28,4 +28,5 @@ $route['produsen/permintaan']	= 'P_notifikasi/view_permintaan';
 $route['distributor']	= 'D_beranda';
 $route['distributor/cari-produsen']	= 'D_cari_produsen';
 $route['distributor/notifikasi']	= 'D_notifikasi';
-$route['distributor/daftar-produsen']	= 'D_produsen';
+// $route['distributor/produsen']	= 'D_produsen';
+$route['distributor/produsen']	= 'D_produsen';

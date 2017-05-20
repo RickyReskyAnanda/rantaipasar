@@ -6,11 +6,13 @@ class P_mutasi extends MY_Controller{
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('M_mutasi');
     }
 
 
     public function index(){
-    	$this->produsen_view('V_mutasi');
+    	$data['data'] = $this->M_mutasi->select_data_mutasi();
+    	$this->produsen_view('V_mutasi',$data);
     }
 }
 ?>

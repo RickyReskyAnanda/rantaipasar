@@ -19,20 +19,9 @@
                 <div class="col-sm-12">
                     <div class="ibox">
                         <div class="ibox-content">
-                            <span class="text-muted small pull-right">Last modification: <i class="fa fa-clock-o"></i> 2:10 pm - 12.06.2014</span>
-                            <h2>Clients</h2>
-                            <p>
-                                All clients need to be verified before you can send email and set a project.
-                            </p>
-                            <div class="input-group">
-                                <input type="text" placeholder="Search client " class="input form-control">
-                                <span class="input-group-btn">
-                                        <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> Search</button>
-                                </span>
-                            </div>
+                            <h2>Daftar Distributor</h2>
                             <div class="clients-list">
                             <ul class="nav nav-tabs">
-                                <span class="pull-right small text-muted">1406 Elements</span>
                                 <li class="active"><a data-toggle="tab" href="#tab-1"><i class="fa fa-user"></i> Contacts</a></li>
                                 <li class=""><a data-toggle="tab" href="#tab-2"><i class="fa fa-briefcase"></i> Companies</a></li>
                             </ul>

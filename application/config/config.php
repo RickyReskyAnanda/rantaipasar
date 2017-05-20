@@ -287,7 +287,7 @@ $config['encryption_key'] = 'ricky';
 */
 $config['sess_driver'] 				= 'files';
 $config['sess_cookie_name'] 		= '1menitid';
-$config['sess_expiration'] 			= 3000;
+$config['sess_expiration'] 			= 86400;
 $config['sess_save_path']			= NULL;
 $config['sess_match_ip'] 			= FALSE;
 $config['sess_time_to_update'] 		= 300;

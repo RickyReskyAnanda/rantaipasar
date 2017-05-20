@@ -12,8 +12,8 @@ class MY_Controller extends CI_Controller{
         $this->load->view($page_isi,$data);
         $this->load->view('H_beranda/V_footer');
     }
-    public function distributor_view($page_isi,$data){
-        $this->load->view('D_beranda/V_head',$data);
+    public function distributor_view($page_isi,$data=array()){
+        $this->load->view('D_beranda/V_header',$data);
         $this->load->view($page_isi,$data);
         $this->load->view('D_beranda/V_footer');
     }

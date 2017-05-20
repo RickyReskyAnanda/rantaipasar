@@ -30,22 +30,14 @@ class A_logged_in extends CI_Controller{
         }
     }
     public function user_log_out(){
-        $newdata = array('nama','posisi','email','id_akun','role','logged_in');
+        $newdata = array('nama_pj','nama_usaha','alamat_usaha','email','id_akun','role','foto_profil','logged_in');
         $this->session->unset_userdata($newdata);
         redirect();
     }
 
     public function proses_pendaftaran(){
-        $data['nama_pj']    = $this->input->post('nama');
-        $data['nama_usaha'] = $this->input->post('nama_usaha');
-        $data['email']      = $this->input->post('email');
-        $data['password']   = $this->input->post('password');
-        $data['password']   = $this->input->post('password');
-        $data['password']   = $this->input->post('password');
-        $data['password']   = $this->input->post('password');
-        $data['password']   = $this->input->post('password');
-
-        $this->db->insert('')
+        $this->load->model('M_logged_in');
+        $this->M_logged_in->insert_data_pendaftaran();
     }
 
 }

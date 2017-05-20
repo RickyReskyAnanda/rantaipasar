@@ -53,7 +53,7 @@
                     <a href="#"><i class="fa fa-globe"></i> <span class="nav-label">Notifikasi </span></a>
                     <ul class="nav nav-second-level collapse">
                         <li><a href="<?=base_url('produsen/pesanan')?>">Pesanan</a></li>
-                        <li><a href="<?=base_url('produsen/permintaan-anggota')?>">Permintaan</a></li>
+                        <li><a href="<?=base_url('produsen/permintaan')?>">Permintaan</a></li>
                     </ul>
                 </li>
                 <li>

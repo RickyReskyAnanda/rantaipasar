@@ -6,11 +6,12 @@ class D_beranda extends MY_Controller{
     public function __construct()
     {
         parent::__construct();
-        $this->cek_session('M_berita');
+        // $this->cek_session('M_berita');
+        $this->load->model('M_beranda');
     }
 
     public function index(){
-        $this->admin_view('V_berita');
+        $this->distributor_view('V_beranda');
     }      
 }
 ?>

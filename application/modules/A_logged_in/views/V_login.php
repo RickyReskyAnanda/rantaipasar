@@ -20,29 +20,93 @@
 
 <body class="gray-bg">
 
-    <div class="middle-box text-center loginscreen animated fadeInDown">
-        <div>
-            <h2>1menit.id - Login Form</h2>
-            <p>Silahkan Login</p>
-            <form class="m-t" role="form" action="<?=base_url('A_logged_in/cek_logged_in')?>" method="post">
-                <div class="form-group">
-                    <input type="email" class="form-control" name="eml" placeholder="Email" required>
+    <div class="container animated fadeInDown" style="margin-top: 100px;">
+        <div class="row">
+
+            <div class="col-md-6">
+                <h2 class="font-bold">Welcome to IN+</h2>
+
+                <p>
+                    Perfectly designed and precisely prepared admin theme with over 50 pages with extra new web app views.
+                </p>
+
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </p>
+
+                <p>
+                    When an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </p>
+
+                <p>
+                    <small>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</small>
+                </p>
+
+            </div>
+            <div class="col-md-6">
+                <div class="ibox-content">
+                    <form class="m-t" role="form" method="post" name="login" method="post" action="<?=base_url('A_logged_in/cek_logged_in')?>">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <input type="email" class="form-control" name="email" placeholder="Username" required="">
+                            </div>
+                            <div class="col-md-5">
+                                <input type="password" class="form-control" name="password" placeholder="Password" required="">
+                            </div>
+                            <div class="col-md-2">
+                                <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+                            </div>
+                        </div>
+                    </form>
+                    <hr class="hr">
+                    <h4></h4>
+                    <form method="post" action="<?=base_url('A_logged_in/proses_pendaftaran')?>" name="daftar"> 
+                    <div class="row" style="margin-top: 15px">
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" name="nama_pj" placeholder="Nama" required="">
+                        </div>
+                    </div>   
+                    <div class="row" style="margin-top: 15px">
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" name="nama_usaha" placeholder="Nama Usaha" required>
+                        </div>
+                     </div>
+                     <div class="row" style="margin-top: 15px">
+                        <div class="col-md-12">
+                            <input type="email" class="form-control" name="email" placeholder="Email" required>
+                        </div>
+                     </div>
+                     <div class="row" style="margin-top: 15px">
+                        <div class="col-md-12">
+                            <input type="password" class="form-control" placeholder="Password" name="password" required>
+                        </div>
+                     </div> 
+                     <div class="row" style="margin-top: 15px">
+                        <div class="col-md-12">
+                            <select class="form-control" name="role" required="">
+                                <option value="distributor">Distributor</option>
+                                <option value="produsen">Produsen</option>
+                            </select>
+                        </div>
+                     </div>   
+                        <button class="btn btn-sm btn-primary btn-block"  style="margin-top: 15px"><i class="fa fa-user"></i> Buat Akun</button>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" name="pwd" placeholder="Password" required>
-                </div>
-                <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
-            </form>
-            <p class="m-t"> <small>Portal Berita 1menit.id &copy; 2017</small> </p>
+            </div>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-md-6">
+                Copyright Example Company
+            </div>
+            <div class="col-md-6 text-right">
+               <small>© 2014-2015</small>
+            </div>
         </div>
     </div>
-
-    <!-- Mainly scripts -->
-    <script src="<?=base_url()?>admin/js/jquery-2.1.1.js"></script>
-    <script src="<?=base_url()?>admin/js/bootstrap.min.js"></script>
 
 </body>
 
 
-<!-- Mirrored from webapplayers.com/inspinia_admin-v2.3/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Dec 2015 00:53:03 GMT -->
+<!-- Mirrored from webapplayers.com/inspinia_admin-v2.3/login_two_columns.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Dec 2015 00:55:09 GMT -->
 </html>
