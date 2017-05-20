@@ -24,7 +24,7 @@
         <div>
             <h2>1menit.id - Login Form</h2>
             <p>Silahkan Login</p>
-            <form class="m-t" role="form" action="<?=base_url('1menitadmin/proses')?>" method="post">
+            <form class="m-t" role="form" action="<?=base_url('A_logged_in/cek_logged_in')?>" method="post">
                 <div class="form-group">
                     <input type="email" class="form-control" name="eml" placeholder="Email" required>
                 </div>

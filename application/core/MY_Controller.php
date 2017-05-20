@@ -26,11 +26,13 @@ class MY_Controller extends CI_Controller{
     //redirect login
     public function cek_session($modelnya){
         $logged_in = $this->session->userdata('logged_in');
-        if($logged_in != "78jhk391menitID") {
-            $this->session->set_flashdata('pesan', 'Silahkan Login Kembali !');
-            redirect('1menitadmin');
-        }else{
+        if($logged_in == "rantaipasarDistributor") {
             $this->load->model($modelnya);
+        }elseif($logged_in == "rantaipasarProdusen") {
+            $this->load->model($modelnya);
+        }else{
+            $this->session->set_flashdata('pesan', 'Silahkan Login Kembali !');
+            redirect('','refresh');
         } 
     }
 }

@@ -13,35 +13,31 @@ class M_logged_in extends CI_Model {
         $pass   = $this->input->post('pwd');
 
         $this->db->where('email',$email);
-        $this->db->where('password',md5(md5($pass).'1mntID').md5($pass));
+        $this->db->where('password',md5(md5($pass).'rantaipasar').md5($pass));
         $data=$this->db->get('tabel_akun');
-
+        $newdata=array();
         if ($data->num_rows() > 0) {
             
             $row = $data->row_array();
             if($row['email']==$email){ 
-                if($row['status']=='aktif'){
-                    $newdata = array(
-                        'nama'      => $row['nama'],
-                        'posisi'    => $row['posisi'],
-                        'email'     => $row['email'],//no_hp
-                        'id_akun'   => $row['id_akun'],
-                        'role'      => $row['role'],
-                        'logged_in' => "78jhk391menitID",
-                    );
+                    
+                    $newdata['nama_pj']     = $row['nama_pj'];
+                    $newdata['nama_usaha']  = $row['nama_usaha'];
+                    $newdata['email']       = $row['email'];//no_hp
+                    $newdata['id_akun']     = $row['id_akun'];
+                    $newdata['role']        = $row['role'];
+                    $newdata['foto_profil'] = $row['foto_profil'];
+                    $newdata['logged_in']   = "rantaipasar".ucfirst($newdata['role']);
+
                     $this->session->set_userdata($newdata);
-                    redirect('1menitadmin/beranda');
-                }else{
-                    $this->session->set_flashdata('pesan', 'Akun belum aktif !');
-                    redirect('1menitadmin');    
-                }
+                    redirect($newdata['role']);
             }else{
                 $this->session->set_flashdata('pesan', 'Email atau Password salah !');
-                redirect('1menitadmin');
+                redirect('','refresh');
             }
         }else{
             $this->session->set_flashdata('pesan', 'Email atau Password salah !');
-            redirect('1menitadmin');   
+            redirect('','refresh');   
         }
     }
 }

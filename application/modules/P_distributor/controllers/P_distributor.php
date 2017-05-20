@@ -11,5 +11,14 @@ class P_distributor extends MY_Controller{
     public function index(){
         $this->produsen_view('V_distributor');
     }
+    public function view_tambah_distributor(){
+        $this->produsen_view('V_distributor');
+    }
+    public function index(){
+        $this->produsen_view('V_distributor');
+    }
+    public function index(){
+        $this->produsen_view('V_distributor');
+    }
 }
 ?>
