@@ -6,13 +6,11 @@ class P_produk extends MY_Controller{
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('M_produk');
     }
    
     public function index(){
         $this->produsen_view('V_produk');
-    }
-    public function view_detail_produk(){
-        $this->produsen_view('V_detail_produk');
     }
     public function view_tambah_produk(){
         $this->produsen_view('V_tambah_produk');
@@ -20,6 +18,19 @@ class P_produk extends MY_Controller{
     public function view_edit_produk(){
         $this->produsen_view('V_edit_produk');
     }
+
+        public function select_data_produk(){
+            $this->M_produk->select_data_produk();
+        }
+        public function select_data_detail_produk(){
+            $this->M_produk->select_data_detail_produk();
+        }
+        public function insert_data_produk(){
+            $this->M_produk->insert_data_produk();
+        }
+        public function update_data_produk(){
+            $this->M_produk->update_data_produk();
+        }
 
 }
 ?>

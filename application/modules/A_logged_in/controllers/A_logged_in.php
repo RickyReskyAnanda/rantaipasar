@@ -34,5 +34,19 @@ class A_logged_in extends CI_Controller{
         $this->session->unset_userdata($newdata);
         redirect();
     }
+
+    public function proses_pendaftaran(){
+        $data['nama_pj']    = $this->input->post('nama');
+        $data['nama_usaha'] = $this->input->post('nama_usaha');
+        $data['email']      = $this->input->post('email');
+        $data['password']   = $this->input->post('password');
+        $data['password']   = $this->input->post('password');
+        $data['password']   = $this->input->post('password');
+        $data['password']   = $this->input->post('password');
+        $data['password']   = $this->input->post('password');
+
+        $this->db->insert('')
+    }
+
 }
 ?>
