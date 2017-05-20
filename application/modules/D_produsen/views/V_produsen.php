@@ -27,8 +27,8 @@
                             </div>
                             <div class="product-desc">
                                 <small class="text-muted"><?=ucfirst($data[$i]['jenis_usaha'])?></small>
-                                <a href="<?=base_url()?>distributor/produk/detail/<?=$data[$i]['id_akun']?>" class="product-name"> <?=ucfirst($data[$i]['nama_usaha'])?></a>
-                                <a href="<?=base_url()?>distributor/produk/detail/<?=$data[$i]['id_akun']?>">
+                                <a href="<?=base_url()?>distributor/produsen/produk/<?=$data[$i]['id_akun']?>" class="product-name"> <?=ucfirst($data[$i]['nama_usaha'])?></a>
+                                <a href="<?=base_url()?>distributor/produsen/produk/<?=$data[$i]['id_akun']?>">
                                 <p><?=ucfirst($data[$i]['no_kontak'])?></p>
                                     <button type="button" class="btn btn-xs btn-outline btn-primary" >
                                         <i class="fa fa-shopping-cart"></i> Pesan 

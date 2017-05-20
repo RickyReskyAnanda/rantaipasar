@@ -44,12 +44,15 @@ class M_notifikasi extends CI_Model {
         }
     }
     public function select_data_permintaan(){
-        $id_produsen = '1';
+        $id_produsen = $this->session->userdata('id_akun');
+        $this->db->join('tabel_akun', 'tabel_akun.id_akun = tabel_relasi.id_distributor');
+        $this->db->where('status_relasi','menunggu');
         $this->db->where('id_produsen',$id_produsen);
         return $this->db->get('tabel_relasi')->result_array();
     }
     public function update_status_data_permintaan(){
-        $id_relasi = $this->input->post('id_relasi');
+        $id_relasi = $this->input->post('id');
+        $data['status_relasi'] = $this->input->post('status');
         $this->db->where('id_relasi',$id_relasi);
         if($this->db->update('tabel_relasi',$data)){
             echo "berhasil";

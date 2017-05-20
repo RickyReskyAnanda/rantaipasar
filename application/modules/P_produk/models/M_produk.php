@@ -9,8 +9,8 @@ class M_produk extends CI_Model {
     }
     public function select_data_produk(){
     	// $id_akun = $this->session->userdata('id_akun');
-    	$id_akun = '1';
-    	$this->db->where('id_akun',$id_akun);
+    	$id_akun = $this->session->userdata('id_akun');
+    	$this->db->where('id_produsen',$id_akun);
     	return $this->db->get('tabel_produk')->result_array();
     }
 
@@ -58,7 +58,7 @@ class M_produk extends CI_Model {
     	$data['nama_produk'] 	= $this->input->post('nama_produk');
     	$data['stok']			= $this->input->post('stok');
     	$data['harga']			= $this->input->post('harga');
-    	$data['id_akun']		= '1';
+    	$data['id_produsen']		= $this->session->userdata('id_akun');
 
     	// print_r($data);
     	if($this->db->insert('tabel_produk',$data)){

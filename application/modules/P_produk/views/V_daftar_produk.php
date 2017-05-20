@@ -12,7 +12,7 @@
                         <?=$data[$i]['harga']?>
                     </span>
                     <a href="#" class="product-name"> <?=$data[$i]['nama_produk']?></a>
-                    <small class="font-bold"><?=$data[$i]['stok']?></small>
+                    <small class="font-bold">Stok <?=$data[$i]['stok']?></small>
                     <div class="modal-footer">
                         <a href="<?=base_url()?>produsen/produk/edit/<?=$data[$i]['id_produk']?>">
                             <button type="button" class="btn btn-xs btn-primary" >

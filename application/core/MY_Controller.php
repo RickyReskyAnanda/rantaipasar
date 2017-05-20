@@ -28,8 +28,14 @@ class MY_Controller extends CI_Controller{
         $logged_in = $this->session->userdata('logged_in');
         if($logged_in == "rantaipasarDistributor") {
             $this->load->model($modelnya);
+            if($this->uri->segment(1)=='produsen'){
+                redirect('distributor');
+            }
         }elseif($logged_in == "rantaipasarProdusen") {
             $this->load->model($modelnya);
+            if($this->uri->segment(1)=='distributor'){
+                redirect('produsen');
+            }
         }else{
             $this->session->set_flashdata('pesan', 'Silahkan Login Kembali !');
             redirect('','refresh');

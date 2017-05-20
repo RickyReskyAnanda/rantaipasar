@@ -6,7 +6,7 @@ class P_produk extends MY_Controller{
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('M_produk');
+        $this->cek_session('M_produk');
     }
    
     public function index(){

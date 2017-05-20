@@ -6,7 +6,7 @@ class P_cari_distributor extends MY_Controller{
     public function __construct()
     {
         parent::__construct();
-        $this->cek_session('M_beranda');
+        $this->cek_session('M_cari_distributor');
     }
     
     public function index(){

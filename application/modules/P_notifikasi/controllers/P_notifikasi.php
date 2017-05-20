@@ -6,7 +6,7 @@ class P_notifikasi extends MY_Controller{
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('M_notifikasi');
+        $this->cek_session('M_notifikasi');
     }
 
     public function view_pemesanan(){
@@ -29,7 +29,8 @@ class P_notifikasi extends MY_Controller{
         $this->produsen_view('V_permintaan');
     }
         public function select_data_permintaan(){
-            $this->M_notifikasi->select_data_permintaan();
+            $data['data']=$this->M_notifikasi->select_data_permintaan();
+            $this->load->view('V_daftar_permintaan',$data);
         }
         public function update_status_data_permintaan(){
             $this->M_notifikasi->update_status_data_permintaan();

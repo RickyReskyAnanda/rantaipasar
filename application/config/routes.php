@@ -26,7 +26,12 @@ $route['produsen/permintaan']	= 'P_notifikasi/view_permintaan';
 //--------------------------------------pembagi---------------------------------------------//
 /*Distributor*/
 $route['distributor']	= 'D_beranda';
-$route['distributor/cari-produsen']	= 'D_cari_produsen';
-$route['distributor/notifikasi']	= 'D_notifikasi';
-// $route['distributor/produsen']	= 'D_produsen';
+$route['distributor/profil']	= 'D_beranda/view_profil';
+$route['distributor/invoice']	= 'D_notifikasi';
+$route['distributor/tagihan']	= 'D_notifikasi/view_tagihan';
+
 $route['distributor/produsen']	= 'D_produsen';
+$route['distributor/produsen/produk/:num']	= 'D_produsen/view_daftar_produk';
+
+$route['distributor/pencarian']	= 'D_cari_produsen';
+$route['distributor/pencarian/detail/:num']	= 'D_cari_produsen/view_detail_produsen';
