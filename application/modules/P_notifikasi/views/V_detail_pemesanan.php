@@ -19,8 +19,8 @@
                 <td><?=$i+1?></td>
                 <td><?=$data['daftar_barang'][$i]['nama_produk']?></td>
                 <td><?=$data['daftar_barang'][$i]['jumlah_order']?></td>
-                <td><?=$data['daftar_barang'][$i]['harga']?></td>
-                <td><?=$data['daftar_barang'][$i]['sub_total']?></td>
+                <td><?="Rp. " . number_format($data['daftar_barang'][$i]['harga'],0,',','.');?></td>
+                <td><?="Rp. " . number_format($data['daftar_barang'][$i]['sub_total'],0,',','.');?></td>
             </tr>
             <?php } ?>
             </tbody>

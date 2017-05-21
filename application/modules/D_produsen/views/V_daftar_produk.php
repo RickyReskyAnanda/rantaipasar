@@ -35,7 +35,9 @@
                     </div>
                     <div class="product-desc">
                         <span class="product-price">
-                           <?=ucfirst($data[$i]['harga']) ?>
+                    <?="Rp. " . number_format($data[$i]['harga'],0,',','.');?>
+
+
                         </span>
                         <a href="#" class="product-name"> <?=ucfirst($data[$i]['nama_produk']) ?></a>
                         <small class="font-bold">Jumlah Stok : <?=ucfirst($data[$i]['stok']) ?></small>

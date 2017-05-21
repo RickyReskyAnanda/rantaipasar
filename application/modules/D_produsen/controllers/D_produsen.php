@@ -17,9 +17,12 @@ class D_produsen extends MY_Controller{
     	$data['data']=$this->M_produsen->select_daftar_data_produk();
         $this->distributor_view('V_daftar_produk',$data);
     }     
-    public function insert_data_pemesanan(){
-    	$this->M_produsen->insert_data_pemesanan();
-    } 
+	    public function insert_data_pemesanan(){
+	    	$this->M_produsen->insert_data_pemesanan();
+	    } 
+	public function view_invoice(){
+		$this->distributor_view('V_invoice');
+	}
     
 }
 ?>

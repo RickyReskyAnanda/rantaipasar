@@ -29,7 +29,7 @@ class M_produsen extends CI_Model {
                 $produk = $this->db->get('tabel_produk')->row_array();
 
                 if($invoice==0){
-                    $isi2['no_invoice']= parse_str($i*3)."/PRO/ads/";
+                    $isi2['no_invoice'] = $i."/PRO/ads/".date('Y');
                     $isi2['id_distributor']=$this->session->userdata('id_akun');
                     $isi2['tgl_invoice']=date('Y-m-d');
                     $isi2['id_produsen']=$produk['id_produsen'];
@@ -54,6 +54,8 @@ class M_produsen extends CI_Model {
                 $this->db->insert('tabel_order',$isi);
             }
         }
+
+        redirect('distributor/invoice/');
     }
 }
 ?>

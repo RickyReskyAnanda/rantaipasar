@@ -26,7 +26,7 @@ class M_notifikasi extends CI_Model {
         $data=$this->db->get('tabel_akun')->row_array();
 
         $this->db->join('tabel_produk', 'tabel_produk.id_produk = tabel_order.id_produk');
-        $this->db->where('id_distributor',$sementara['id_distributor']);
+        $this->db->where('id_invoice',$id);
         $data['daftar_barang'] = $this->db->get('tabel_order')->result_array();
 
         return $data;

@@ -9,7 +9,7 @@
                 </div>
                 <div class="product-desc">
                     <span class="product-price">
-                        <?=$data[$i]['harga']?>
+                    <?="Rp. " . number_format($data[$i]['harga'],2,',','.');?>
                     </span>
                     <a href="#" class="product-name"> <?=$data[$i]['nama_produk']?></a>
                     <small class="font-bold">Stok <?=$data[$i]['stok']?></small>
